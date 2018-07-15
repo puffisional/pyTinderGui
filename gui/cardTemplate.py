@@ -1,0 +1,92 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file '.\cardTemplate.ui'
+#
+# Created by: PyQt5 UI code generator 5.8.2
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_Form(object):
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(598, 170)
+        Form.setStyleSheet("")
+        self.gridLayout = QtWidgets.QGridLayout(Form)
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout.setVerticalSpacing(0)
+        self.gridLayout.setObjectName("gridLayout")
+        self.thumbList = QtWidgets.QHBoxLayout()
+        self.thumbList.setContentsMargins(-1, 10, -1, 10)
+        self.thumbList.setSpacing(5)
+        self.thumbList.setObjectName("thumbList")
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.thumbList.addItem(spacerItem)
+        self.gridLayout.addLayout(self.thumbList, 2, 0, 1, 1)
+        self.photosFrame = QtWidgets.QFrame(Form)
+        self.photosFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.photosFrame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.photosFrame.setObjectName("photosFrame")
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.photosFrame)
+        self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_2.setSpacing(0)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.gridLayout.addWidget(self.photosFrame, 1, 0, 1, 1)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setContentsMargins(-1, 0, -1, 5)
+        self.horizontalLayout.setSpacing(5)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.pushButton = QtWidgets.QPushButton(Form)
+        self.pushButton.setCheckable(True)
+        self.pushButton.setAutoExclusive(True)
+        self.pushButton.setObjectName("pushButton")
+        self.horizontalLayout.addWidget(self.pushButton)
+        self.pushButton_3 = QtWidgets.QPushButton(Form)
+        self.pushButton_3.setCheckable(True)
+        self.pushButton_3.setAutoExclusive(True)
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.horizontalLayout.addWidget(self.pushButton_3)
+        self.pushButton_2 = QtWidgets.QPushButton(Form)
+        self.pushButton_2.setCheckable(True)
+        self.pushButton_2.setAutoExclusive(True)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.horizontalLayout.addWidget(self.pushButton_2)
+        self.gridLayout.addLayout(self.horizontalLayout, 3, 0, 1, 1)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setSpacing(0)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.nameLabel = QtWidgets.QLabel(Form)
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.nameLabel.setFont(font)
+        self.nameLabel.setStyleSheet("background:#e3e3e3;padding:15px")
+        self.nameLabel.setObjectName("nameLabel")
+        self.horizontalLayout_2.addWidget(self.nameLabel)
+        self.distanceLabel = QtWidgets.QLabel(Form)
+        font = QtGui.QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.distanceLabel.setFont(font)
+        self.distanceLabel.setStyleSheet("background:#e3e3e3;padding:15px")
+        self.distanceLabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.distanceLabel.setObjectName("distanceLabel")
+        self.horizontalLayout_2.addWidget(self.distanceLabel)
+        self.gridLayout.addLayout(self.horizontalLayout_2, 0, 0, 1, 1)
+
+        self.retranslateUi(Form)
+        self.pushButton.clicked['bool'].connect(Form.like)
+        self.pushButton_3.clicked['bool'].connect(Form.star)
+        self.pushButton_2.clicked['bool'].connect(Form.dislike)
+        QtCore.QMetaObject.connectSlotsByName(Form)
+
+    def retranslateUi(self, Form):
+        _translate = QtCore.QCoreApplication.translate
+        Form.setWindowTitle(_translate("Form", "Form"))
+        self.pushButton.setText(_translate("Form", "šumná"))
+        self.pushButton_3.setText(_translate("Form", "Super-Pekniačka"))
+        self.pushButton_2.setText(_translate("Form", "Nešumná"))
+        self.nameLabel.setText(_translate("Form", "TextLabel"))
+        self.distanceLabel.setText(_translate("Form", "TextLabel"))
+
